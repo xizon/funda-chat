@@ -1,0 +1,53 @@
+{
+    "name": "funda-chat",
+    "version": "1.0.0",
+    "homepage": "http://.",
+    "license": "MIT",
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "serve": "node backend/server-main.js"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "dependencies": {
+        "axios": "^0.27.2",
+        "dotenv": "^16.0.3",
+        "funda-ui": "^1.0.317",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-redux": "^8.1.2",
+        "react-router-dom": "^6.16.0",
+        "redux": "^4.2.1",
+        "redux-thunk": "^2.4.2",
+        "socket.io-client": "^4.7.2"
+    },
+    "devDependencies": {
+        "@types/node": "^16.18.14",
+        "@types/react": "^18.0.28",
+        "@types/react-dom": "^18.0.11",
+        "browserify": "^17.0.0",
+        "cors": "^2.8.5",
+        "express": "^4.18.1",
+        "express-jwt": "^8.4.1",
+        "glob": "^10.3.3",
+        "jsonwebtoken": "^9.0.2",
+        "node-schedule": "^2.1.1",
+        "react-scripts": "^5.0.1",
+        "sass": "^1.58.3",
+        "socket.io": "^4.6.1",
+        "typescript": "^4.9.5"
+    }
+}
