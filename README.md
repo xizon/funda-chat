@@ -1,5 +1,8 @@
 # Funda Chat
 
+A simple live chat app.
+
+
 run：
 
 ```bash
