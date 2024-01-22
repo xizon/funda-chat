@@ -47,7 +47,7 @@ app.use('/chat-messages', require('./routes/chat-messages'));
 app.use('/chat-get-channels', require('./routes/chat-get-channels'));
 app.use('/chat-get-online-users', require('./routes/chat-get-online-users'));
 app.use('/chat-remove-user', require('./routes/chat-remove-user'));
-
+app.use('/chat-audio', require('./routes/chat-audio'));
 
 
 /*

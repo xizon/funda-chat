@@ -137,6 +137,18 @@ const uid = (length: number) => {
 };
 
 
+
+const soundAct = (str: string) => {
+    axios.get(apiUrls.CHAT_SOUND, {
+        params: { symbol: str },
+        headers: {
+            ...authMsHeader() as any,
+            'Content-Type': 'application/json'
+        }
+    });
+};
+
+
 export {
     initiateSocket,
     switchChannel,
@@ -149,5 +161,6 @@ export {
     updateUserOnline,
     scrollArea,
     quitChat,
-    uid
+    uid,
+    soundAct
 }

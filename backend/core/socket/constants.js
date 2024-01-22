@@ -23,6 +23,7 @@ const __CHAT_CHANNELS = [
     }
 ];
 const __CHAT_AUTO_LOGOUT_TIME = 1000 * 30;  // seconds
+const __CHAT_STATIC_RESOURCES_DIR = 'public/assets';
 
 
 const NEW_MESSAGE = 'NEW_MESSAGE';
@@ -34,6 +35,8 @@ const CHANNEL_USERS_DATA = 'CHANNEL_USERS_DATA';
 const UPDATE_USER_ONLINE = 'UPDATE_USER_ONLINE';
 
 
+
+
 module.exports = {
     EVENT_NOTIFICATION,
     EVENT_ABORT,
@@ -43,6 +46,7 @@ module.exports = {
     __CHAT_MESSAGES,
     __CHAT_CHANNELS,
     __CHAT_AUTO_LOGOUT_TIME,
+    __CHAT_STATIC_RESOURCES_DIR,
     NEW_MESSAGE,
     MESSAGE_SEND,
     CHAT_ABORT,

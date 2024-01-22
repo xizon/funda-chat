@@ -12,7 +12,8 @@ import {
     subscribeData,
     quitChat,
     getOnlineUsers,
-    updateUserOnline
+    updateUserOnline,
+    soundAct
 } from './helpers';
 import MessageList from './MessageList';
 import SendMessageForm from './SendMessageForm';
@@ -240,6 +241,9 @@ function Chat(props: any) {
                         setMessages((messages) => [...messages, text]);
                         setScrollbarUpdate(Math.random());
                         setNewMessageTotal((prevState) => ++prevState);
+
+                        // sound
+                        soundAct('ping');
 
                     }
 

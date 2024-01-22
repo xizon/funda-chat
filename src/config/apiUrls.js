@@ -4,7 +4,8 @@ const config = {
     "CHAT_GET_CHANNELS": "http://localhost:4001/chat-get-channels",
     "CHAT_SEND_MESSAGE": "http://localhost:4001/chat-messages",
     "CHAT_GET_ONLINE_USERS": "http://localhost:4001/chat-get-online-users",
-    "CHAT_REMOVE_USER": "http://localhost:4001/chat-remove-user"
+    "CHAT_REMOVE_USER": "http://localhost:4001/chat-remove-user",
+    "CHAT_SOUND": "http://localhost:4001/chat-audio"
 }
 
 const localConfig = {
@@ -13,7 +14,8 @@ const localConfig = {
     "CHAT_GET_CHANNELS": "http://localhost:4001/chat-get-channels",
     "CHAT_SEND_MESSAGE": "http://localhost:4001/chat-messages",
     "CHAT_GET_ONLINE_USERS": "http://localhost:4001/chat-get-online-users",
-    "CHAT_REMOVE_USER": "http://localhost:4001/chat-remove-user"
+    "CHAT_REMOVE_USER": "http://localhost:4001/chat-remove-user",
+    "CHAT_SOUND": "http://localhost:4001/chat-audio"
 };
 
 
