@@ -17,7 +17,7 @@ function MessageList(props: any) {
                         <div className="app-chat__media-body">
                 
                             {typeof item.text === 'object' ? <>
-                                <div className="app-chat__msg-wrapper" data-to-user-data={item.text.toUserData} dangerouslySetInnerHTML={{ __html: `${item.text.content}` }}>
+                                <div className="app-chat__msg-wrapper" dangerouslySetInnerHTML={{ __html: `${item.text.content}` }}>
                                 </div>
                             </> : <>
                                 <div className="app-chat__msg-wrapper" dangerouslySetInnerHTML={{ __html: `${item.text}` }}>

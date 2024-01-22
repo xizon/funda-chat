@@ -5,9 +5,34 @@ import {
 /**
  * Send a message from system
  * @param {String} content 
- * @param {*} toUserData 
+ * @param {Array} toUserData 
  */
 
+/*
+EXAMPLE:
+
+sysSendToUser(
+    `Welcome, xxxx`,
+    [
+        {
+            session_id: 'xxxx-xxxx-xxxx-xxxx,
+            user_no: '13',
+            user_id: 274382,
+            user_name: 'David'
+        },
+        {
+            session_id: 'xxxx-xxxx-xxxx-xxxx,
+            user_no: '14',
+            user_id: 274392,
+            user_name: 'Lily'
+        }
+    ],
+    () => {
+        // callback
+    }
+);
+
+*/
 function sysSend(content, toUserData) {
     let timer;
     const key = 'CHAT_TEMP_MSG';

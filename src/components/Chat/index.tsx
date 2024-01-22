@@ -125,6 +125,69 @@ function Chat(props: any) {
         updateUserOnline(currentUser, currentChannel, (users: any[], channels: any[]) => void(0));
     }
 
+
+    /*
+    async function isCurrentUserMsg(textData: any) {
+        if (typeof textData === 'string') return true;
+
+        const res = await sessionData();
+
+        // check users
+        if (Array.isArray(textData.toUserData)) {
+            const userIds = textData.toUserData.map((v: any) => {
+                if (typeof v.user_id !== 'undefined' && v.user_id != null) {
+                    return v.user_id.toString();
+                }
+            }).filter(Boolean);
+
+            if ( userIds.includes(res.user_id.toString()) ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        return false;
+
+    }
+
+    async function filterCurrentUserMsg(data: any[]) {
+        const res = await sessionData();
+
+        const visibleData = data.filter((item: any) => {
+
+            // Visible to logged users
+            if (typeof item.text === 'object') {
+
+                // check users
+                if (Array.isArray(item.text.toUserData)) {
+                    const userIds = item.text.toUserData.map((v: any) => {
+                        if (typeof v.user_id !== 'undefined' && v.user_id != null) {
+                            return v.user_id.toString();
+                        }
+                    }).filter(Boolean);
+
+                    if ( userIds.includes(res.user_id.toString()) ) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                } else {
+                    return false;
+                }
+
+            } else {
+                // Visible to all users
+                return true;
+            }
+        });
+
+        return visibleData;
+        
+    }
+    */
+
+
     useEffect(() => {
 
         // offline status
