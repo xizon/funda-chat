@@ -29,6 +29,8 @@
     --chat-text-color-lightsecondary: #9595b5;
     --chat-text-color-dark: #333;
     --chat-text-color-darksecondary: #4046a0;
+    --chat-user-text-color: #333;
+    --chat-help-text-color: #b7b7b7;
 
 
     /* Trigger */
@@ -244,6 +246,7 @@
         height: 32px;
         border-radius: 100%;
         margin: 0 0.5rem;
+        text-align: center;
 
         &.app-chat__image-user--main {
             width: 42px;
@@ -255,9 +258,9 @@
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            width: 50px;
+            width: 100%;
             font-size: calc(var(--chat-base-font-size) * 0.833333333333333);
-            opacity: .8;
+            color: var(--chat-user-text-color);
             
         }
 
@@ -399,6 +402,7 @@
             letter-spacing: 1px;
             border-radius: 4px;
             margin-block-start: 0.5rem;
+            color: var(--chat-help-text-color);
         }
     }
     

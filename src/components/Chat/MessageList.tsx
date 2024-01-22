@@ -15,8 +15,15 @@ function MessageList(props: any) {
                     <div className={`app-chat__media ${item.user !== currentUser ? 'app-chat__left' : 'flex-row-reverse app-chat__right'}`}>
                         <div className="app-chat__image-user"><img alt={item.user} src={item.avatar} /><small>{item.user}</small></div>
                         <div className="app-chat__media-body">
-                            <div className="app-chat__msg-wrapper" dangerouslySetInnerHTML={{ __html: `${item.text}` }}>
-                            </div>
+                
+                            {typeof item.text === 'object' ? <>
+                                <div className="app-chat__msg-wrapper" data-to-user-data={item.text.toUserData} dangerouslySetInnerHTML={{ __html: `${item.text.content}` }}>
+                                </div>
+                            </> : <>
+                                <div className="app-chat__msg-wrapper" dangerouslySetInnerHTML={{ __html: `${item.text}` }}>
+                                </div>
+                            </>}
+
                             <div className="app-chat__msg-time">
                                 <span>{item.date}</span>
                             </div>
