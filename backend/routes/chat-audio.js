@@ -28,7 +28,9 @@ router.get('/', jwt({ secret: getSecret, algorithms: ALGORITHMS }), async (req, 
         const sendAudioPath = path.join(__dirname, `../../${__CHAT_STATIC_RESOURCES_DIR}/audios/${fileName}`);
         
         if (fs.existsSync(sendAudioPath)) {
-            sound.play(sendAudioPath);
+            try {
+                sound.play(sendAudioPath);           
+            } catch (err) {}
         }
 
         return res.json({});
