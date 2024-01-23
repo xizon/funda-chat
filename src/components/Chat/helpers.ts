@@ -137,7 +137,9 @@ const uid = (length: number) => {
 };
 
 
-
+/* DO NOT USE IT for DOCKER， The container causes the error 
+"Error: Command failed: powershell -c Add-Type -AssemblyName presentationCore; $player = New-Object system.windows.media.mediaplayer;" 
+*/
 const soundAct = (str: string) => {
     axios.get(apiUrls.CHAT_SOUND, {
         params: { symbol: str },
