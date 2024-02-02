@@ -17,7 +17,7 @@ router.get('/', jwt({ secret: getSecret, algorithms: ALGORITHMS }), async (req, 
 
     try {
         
-        const allMessages = getChannelMessages(channel);
+        const allMessages = await getChannelMessages(channel);
         return res.json({ allMessages });
 
     } catch (err) {

@@ -17,7 +17,10 @@ router.get('/', jwt({ secret: getSecret, algorithms: ALGORITHMS }), async (req, 
 
     try {
 
-        return res.json({ onlineUsers: getUsersInRoom(channel) });
+
+        const userRoom = await getUsersInRoom(channel);
+
+        return res.json({ onlineUsers: userRoom });
 
     } catch (err) {
         res.status(500).send({

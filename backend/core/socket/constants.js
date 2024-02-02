@@ -36,6 +36,10 @@ const UPDATE_USER_ONLINE = 'UPDATE_USER_ONLINE';
 
 
 
+const DB_DIR = 'db';
+const DB_PATH_USERS = 'db/chat_users';
+const DB_PATH_MESSAGES = 'db/chat_msg';
+
 
 module.exports = {
     EVENT_NOTIFICATION,
@@ -54,4 +58,9 @@ module.exports = {
     CHANNEL_JOIN,
     CHANNEL_USERS_DATA,
     UPDATE_USER_ONLINE,
+
+    // database
+    DB_DIR,
+    DB_PATH_USERS,
+    DB_PATH_MESSAGES,  
 }     

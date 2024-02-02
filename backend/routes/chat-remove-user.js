@@ -18,7 +18,7 @@ router.get('/', jwt({ secret: getSecret, algorithms: ALGORITHMS }), async (req, 
     try {
 
         // update users
-        const users = removeUser(decodeURI(nickname));
+        const users = await removeUser(decodeURI(nickname));
 
         return res.json({ onlineUsers: users });
 

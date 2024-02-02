@@ -13,10 +13,8 @@ const {
 
 // chat
 const {
-    __CHAT_USERS,
-    __CHAT_MESSAGES,
-    __CHAT_CHANNELS
-} = require('./core/socket/constants');
+    deleteDatabase
+} = require('./core/socket/helpers');
 
 
 //
@@ -62,11 +60,9 @@ rule.minute = 0;
 
 
 const job = schedule.scheduleJob(rule, function () {
-    console.log('--> [chat app] Auto clear users, messages and channels.');
-    __CHAT_USERS.splice(0, __CHAT_USERS.length);
-    __CHAT_MESSAGES.splice(0, __CHAT_MESSAGES.length);
-    __CHAT_CHANNELS.splice(0, __CHAT_CHANNELS.length);
-
+    deleteDatabase().then(() => {
+        console.log('--> [chat app] Auto clear users, messages and channels.');
+    });
 });
 
 
