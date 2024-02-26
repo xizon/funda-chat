@@ -203,9 +203,15 @@ const updateUserOnlineStatus = async (name, channel) => {
  */
 const addMessage = async (data) => {
 
-    // add new
-    await dbMsg.push("/list[]", data);
-    console.log('-->  [db] update users database ok')
+
+    // Prevent unexpected error termination of service
+    // viod `throw new Errors_1.DataError(`Can't find dataPath: ${thisDb.config.separator}${dataPath.join(thisDb.config.separator)}. Stopped at ${property}`, 5);`
+    try {
+        // add new
+        await dbMsg.push("/list[]", data);
+        console.log('-->  [db] update messages database ok')    
+    } catch (err) {}
+
 
     return data;
 };
